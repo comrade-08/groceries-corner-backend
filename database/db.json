@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "jeeva",
+      "mobileNumber": "+911234567890",
+      "address": "theni",
+      "password": "123456",
+      "confirmPassword": "123456"
+    }
+  ],
+  "products": []
+}
