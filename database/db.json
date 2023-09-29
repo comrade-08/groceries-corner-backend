@@ -7,6 +7,13 @@
       "address": "theni",
       "password": "123456",
       "confirmPassword": "123456"
+    },
+    {
+      "userName": "jeeva",
+      "mobileNumber": "+916374873219",
+      "address": "Theni",
+      "password": "123456",
+      "id": 2
     }
   ],
   "products": []
