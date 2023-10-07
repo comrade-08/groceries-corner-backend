@@ -9,5 +9,7 @@ router.get('/', (req, res, next) => {
     })
 })
 router.get('/get-users', usersController.getUsers)
+router.post('/register', usersController.registerUser)
+router.post('/login', usersController.loginUser)
 
 module.exports = router

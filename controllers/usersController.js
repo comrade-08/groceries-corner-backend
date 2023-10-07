@@ -27,18 +27,19 @@ module.exports = {
         })
       } else {
         const salt = 10
-        bcrypt.hash(req.body.password, salt).then((hashErr, hash) => {
+        bcrypt.hash(req.body.password, salt).then((hash, hashErr) => {
           const newUser = new User({
             userName: req.body.userName,
             mobileNumber: req.body.mobileNumber,
             email: req.body.email,
             address: req.body.address,
             password: hash,
+            isAdmin: true,
             incompleteOrders: [],
             ordersHistory: []
           })
-
           newUser.save().then((user) => {
+            console.log('done');
             res.json({
               status: true,
               response: user
