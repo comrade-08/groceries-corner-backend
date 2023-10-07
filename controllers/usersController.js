@@ -65,10 +65,15 @@ module.exports = {
       if (user) {
         bcrypt.compare(req.body.password, user.password).then(bcryptRes => {
           if (bcryptRes) {
-            JWT.sign({
+            const token = JWT.sign({
               data: user,
               loginPassword: req.body.password
             }, JWT_SECRET_KEY)
+            res.json({
+              status: true,
+              token: token,
+              response: user
+            })
           } else {
             res.json({
               status: false,

@@ -3,10 +3,10 @@ const router = express.Router()
 const usersController = require('../controllers/usersController')
 
 router.get('/', (req, res, next) => {
-    res.json({
-        status: true,
-        message: 'Its working'
-    })
+  res.json({
+    status: true,
+    message: 'Its working'
+  })
 })
 router.get('/get-users', usersController.getUsers)
 router.post('/register', usersController.registerUser)

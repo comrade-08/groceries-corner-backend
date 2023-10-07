@@ -16,6 +16,7 @@ module.exports = {
         somethingWrong: 'Something went wrong !',
         userExist: 'Mobile Number already exist !',
         userNotFound: 'User not found !',
-        incorrectPassword: 'Incorrect Password !'
+        incorrectPassword: 'Incorrect Password !',
+        invalidToken: 'Invalid Token'
     }
 }

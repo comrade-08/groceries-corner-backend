@@ -4,6 +4,7 @@ const app = express()
 const config = require('./config')
 const connection = require('./database/connection')
 const usersRoutes = require('./routes/usersRoutes')
+const productsRoutes = require('./routes/productsRoutes')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 // const jsonServer = require('json-server')
@@ -16,6 +17,7 @@ const bodyParser = require('body-parser')
 app.use(cors({origin: '*'}))
 app.use(bodyParser.json())
 app.use('/users', usersRoutes)
+app.use('/products', productsRoutes)
 
 if (config.env === 'dev') {
     app.listen(config.port.dev, () => {
