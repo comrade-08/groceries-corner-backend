@@ -88,5 +88,22 @@ module.exports = {
         })
       }
     })
+  },
+
+  updateUser: (req, res, next) => {
+    User.updateOne({
+      _id: req.decoded.id,
+      $set: {}
+    }).then(updateRes => {
+      res.json({
+        status: false,
+        response: updateRes
+      })
+    }).catch(updateErr => {
+      res.json({
+        status: false,
+        response: 'User data not updated !'
+      })
+    })
   }
 }

@@ -5,5 +5,9 @@ module.exports = {
       status: true,
       response: []
     })
+  },
+
+  addProduct: (req, res, next) => {
+    
   }
 }
